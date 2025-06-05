@@ -76,20 +76,11 @@ from openedx.core.lib.courses import course_image_url
           </div>
         </div>
         % endif
-
         <div class="info-profile">
           <h1>
             ${course.display_name_with_default}
           </h1>
-          <%
-            org_slug = course.display_org_with_default.lower().replace(' ', '-')
-          %>
-          <span class="org"> 
-            <img src="/static/indigo/${org_slug}.png"
-              alt="${course.display_org_with_default} Logo"
-              style="height: 40px; max-width: 120px; object-fit: contain;"
-              onerror="this.style.display='none';" />
-          </span>
+          <span class="org">${course.display_org_with_default}</span>
         </div>
       </div>
       <div class="main-cta">
