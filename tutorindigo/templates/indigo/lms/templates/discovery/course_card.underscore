@@ -4,17 +4,6 @@
                 <!-- NEW IN INDIGO: Add fallback image in case of no course-image using onerror -->
                 <img src="<%- image_url %>" onerror="this.src='/theming/asset/images/no_course_image.png';" alt="" />
             </div>
-            <div class="org-logo-container" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); z-index: 10;">
-                <div style="display: inline-block; background: white; padding: 8px 12px; border-radius: 50px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); border: 2px solid #f8f9fa;">
-                    <% 
-                        org_slug = org.lower().replace(' ', '-')
-                    %>
-                    <img src="/static/indigo/${org_slug}.png"
-                        alt="${org_slug} Logo"
-                        style="height: 35px; max-width: 100px; object-fit: contain; display: block;" 
-                        onerror="this.style.display='none'; this.parentElement.style.display='none';" />
-                </div>
-            </div>
         </header>
         <section class="course-info" style="padding-top: 35px; position: relative; z-index: 5;">
             <h2 class="course-name">
