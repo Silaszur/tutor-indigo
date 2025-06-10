@@ -1,4 +1,4 @@
-<a href="/courses/<%- course %>/about" aria-label="">
+<a href="/courses/<%- course %>/about" aria-label="" style="text-decoration: none;">
     <article class="course" role="region" aria-label="<%- content.display_name %>">
             <header class="course-image">
                 <div class="cover-image">
@@ -10,7 +10,7 @@
                         <% 
                             org_slug = org.lower().replace(' ', '-')
                         %>
-                        <img src="/static/indigo/${org_slug}.png"
+                        <img src="/static/indigo/images/${org_slug}.png"
                             alt="${org_slug} Logo"
                             style="height: 35px; max-width: 100px; object-fit: contain; display: block;" 
                             onerror="this.style.display='none'; this.parentElement.style.display='none';" />
