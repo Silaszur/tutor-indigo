@@ -1,13 +1,22 @@
 <a href="/courses/<%- course %>/about" class="learn-more" aria-label="" style="text-decoration: none;">
     <article class="course" role="region" aria-label="<%- content.display_name %>">
-        <header class="course-image">
+        <header class="course-image" style="position: relative;">
             <div class="cover-image">
                 <!-- NEW IN INDIGO: Add fallback image in case of no course-image using onerror -->
                 <img src="<%- image_url %>" onerror="this.src='/theming/asset/images/no_course_image.png';" alt="" />
             </div>
-            <img src="${static.url('images/hilscher.svg')}" 
+            <img src="<%= '/images/hilscher.svg' %>" 
                  alt="logo" 
-                 style="position: absolute; top: 3rem; left: 1.5rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); padding: 0.5rem; border-radius: 4px; width: 7rem; height: 4rem;" />
+                 style="position: absolute; bottom: -1.5rem; left: 1.5rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); padding: 0.5rem; border-radius: 4px; width: 7rem; height: 4rem;" />
+            <img src="<%- static.url('images/hilscher.svg') %>" 
+                 alt="logo" 
+                 style="position: absolute; bottom: -1.5rem; left: 1.5rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); padding: 0.5rem; border-radius: 4px; width: 7rem; height: 4rem;" />
+            <img src="/static/images/hilscher.svg" 
+                 alt="logo" 
+                 style="position: absolute; bottom: -1.5rem; left: 1.5rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); padding: 0.5rem; border-radius: 4px; width: 7rem; height: 4rem;" />
+            <img src="/theming/asset/images/hilscher.svg"
+                 alt="logo" 
+                 style="position: absolute; bottom: -1.5rem; left: 1.5rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); padding: 0.5rem; border-radius: 4px; width: 7rem; height: 4rem;" />
         </header>
         <section class="course-info" style="padding-top: 35px; position: relative; z-index: 5;">
             <h2 class="course-name">
