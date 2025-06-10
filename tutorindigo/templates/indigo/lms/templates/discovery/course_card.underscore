@@ -1,4 +1,4 @@
-<a href="/courses/<%- course %>/about" aria-label="" style="text-decoration: none;">
+<a href="/courses/<%- course %>/about" class="learn-more" aria-label="" style="text-decoration: none;">
     <article class="course" role="region" aria-label="<%- content.display_name %>">
             <header class="course-image">
                 <div class="cover-image">
