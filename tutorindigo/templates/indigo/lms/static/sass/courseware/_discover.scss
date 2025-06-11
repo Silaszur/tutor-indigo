@@ -166,15 +166,11 @@
               }
             }
 
-            @media (prefers-color-scheme: dark) {
-              .course-meta {
-                .start-date-badge {
-                  background-color: #1f2937; // Darker gray (gray-800 from Tailwind)
-                  color: #ffffff; // Pure white text
-                }
-              }
+            // Use class-based dark mode
+            .dark .course-meta .start-date-badge {
+              background-color: #1f2937; // dark gray
+              color: #ffffff; // white text
             }
-
             .course-date {
               border-top: 1px solid #ecf0f4;
               padding: 10px 20px;
