@@ -165,12 +165,6 @@
                 }
               }
             }
-
-            // Use class-based dark mode
-            .indigo-dark-theme .course-meta .start-date-badge {
-              background-color: #1f2937; // dark gray
-              color: #ffffff; // white text
-            }
             .course-date {
               border-top: 1px solid #ecf0f4;
               padding: 10px 20px;
@@ -542,6 +536,15 @@ body.indigo-dark-theme {
               .learn-more {
                 background: $primary-d;
                 color: $btn-color-d;
+              }
+              .course-meta .start-date-badge {
+                background-color: $light-overlay-d;
+                color: $text-color-primary;
+                svg {
+                  path {
+                    fill: $text-color-primary;
+                  }
+                }
               }
               .course-date {
                 border-top: 1px solid $border-color-d;
