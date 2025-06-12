@@ -80,7 +80,12 @@ from openedx.core.lib.courses import course_image_url
           <h1>
             ${course.display_name_with_default}
           </h1>
-          <span class="org">${course.display_org_with_default}</span>
+          <%
+            org_slug = course.display_org_with_default.lower().replace(' ', '-')
+          %>
+          <img src="/theming/asset/images/${org_slug}.svg"
+            alt="${org_slug}"
+            style="height: 2rem; vertical-align: middle;" />
         </div>
       </div>
       <div class="main-cta">
