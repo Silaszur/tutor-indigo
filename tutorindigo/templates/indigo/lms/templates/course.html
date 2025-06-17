@@ -6,11 +6,18 @@ from django.urls import reverse
 %>
 <%page args="course" expression_filter="h"/>
 <article class="course" id="${course.id}" role="region" aria-label="${course.display_name_with_default}">
-    <header class="course-image">
+    <header class="course-image" style="position: relative;">
+      <%
+        org_slug = course.display_org_with_default.lower().replace(' ', '-')
+      %>
       <div class="cover-image">
         <!-- NEW IN INDIGO: Add fallback image in case of no course-image using onerror -->
         <img src="${course.course_image_url}" onerror="this.src='/theming/asset/images/no_course_image.png';" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
       </div>
+      <img src="/theming/asset/images/${org_slug}.svg"
+        alt="${org_slug}-logo" 
+        style="position: absolute; bottom: -1.5rem; left: 1.5rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); padding: 1rem; border-radius: 4px; width: 7rem; height: 2rem;" 
+        onerror="this.style.display = 'none'"/>
     </header>
     <div class="course-info" aria-hidden="true">
       <h2 class="course-name">
