@@ -10,6 +10,8 @@ from django.urls import reverse
       <header class="course-image" style="position: relative;">
         <%
           org_slug = course.display_org_with_default.lower().replace(' ', '-')
+          org = course.org if hasattr(course, 'org') else None
+          org_image_url = org.logo.url if org and hasattr(org, 'logo') and org.logo else None
         %>
         <div class="cover-image">
           <!-- NEW IN INDIGO: Add fallback image in case of no course-image using onerror -->
@@ -18,7 +20,11 @@ from django.urls import reverse
         <img src="/theming/asset/images/${org_slug}.svg"
           alt="${org_slug}-logo" 
           style="position: absolute; bottom: -1.5rem; left: 1.5rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); padding: 1rem; border-radius: 4px; width: 7rem; height: 2rem;" 
-          onerror="this.style.display = 'none'"/>
+          onerror="this.style.display = 'none'"/>     
+        <img src="${org_image_url}"
+          alt="${org_slug}-logo" 
+          style="position: absolute; bottom: -1.5rem; left: 1.5rem; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); padding: 1rem; border-radius: 4px; width: 7rem; height: 2rem;" 
+          onerror="this.style.display = 'none'"/>     
       </header>
       <div class="course-info" aria-hidden="true" style="padding-top: 35px;">
         <h2 class="course-name">
